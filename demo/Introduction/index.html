@@ -6,8 +6,16 @@
 	<script src="../../lib/vue.js"></script>
 </head>
 <body>
+	<!-- 声明式渲染 -->
 	<div id="app">
 		{{ message }}
 	</div>
+	<div id="app-2">
+		<span v-bind:title="seen">
+			hover to see the title
+		</span>
+	</div>
+	<!-- 条件与循环 -->
+
 </body>
 </html>
