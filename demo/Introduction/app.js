@@ -37,7 +37,10 @@ var data = {a: 1};
 var vm = new Vue({
 	el: '#app1',
 	data: {
-		a: 1
+		a: 1,
+		ok: true,
+		id: 'id1',
+		isActive: true
 	},
 	watch: {
 		a: function(val, oldVal) {
