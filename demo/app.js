@@ -47,6 +47,14 @@ var vm = new Vue({
 			console.log('new: s%, old %s', val, oldVal)
 		}
 	},
+	filters: {
+		// {{ message | filterA(arg1,arg2) }}
+		filterA: function(value, arg1,arg2) {
+			if(!value) return
+				value = value.toString()
+			return value.charAt(0).toUpperCase() + value.slice(1)
+		}
+	},
 	created: function(){
 		console.log('a is:' + this.a)
 	}
