@@ -1,6 +1,6 @@
 //观察 Watchers
 var watchExampleVM = new Vue({
-	el: '#app2',
+	el: '#watchers',
 	data: function(){
 		return {
 			question: '',

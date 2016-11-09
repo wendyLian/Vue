@@ -9,7 +9,9 @@
 </head>
 <body>
 
+	<!-- app && app1 基础 -->
 	<div id="app">
+		<div>*************************app && app1 基础**********************</div>
 		<span>
 			{{message}}	
 		</span>
@@ -21,9 +23,7 @@
 		</ul>
 		<p v-if="seen">you see me</p>
 		<button v-on:click="reverseMessage">reserveMessage</button>
-		<div>***********************************************************</div>
 	</div>
-
 	<div id="app1">
 		<!-- <div v-once>This will never change: {{ a }}</div> ??-->
 		<ul>
@@ -32,10 +32,20 @@
 		<!-- <div v-html="rawHtml"></div> ??-->
 		<div v-bind:href="url"></div>
 		<!-- <div v-on:submit.prevent="onSubmit"></div> -->
-		<div>***********************************************************</div>
 	</div>
 
-	<div id="app2">
+	<!-- 计算属性 -->
+	<div id="computed">
+		<div>*************************计算属性**********************</div>
+		<p>Original message: "{{ message }}"</p>
+		<p>Computed reversed message: "{{ reversedMessage }}"</p>
+		<!-- <p>Date: "{{ now }}"</p> -->
+		<div>{{ fullName }}</div>
+	</div>
+
+	<!-- 观察watchers -->
+	<div id="watchers">
+		<div>*************************观察watchers**********************</div>
 		<div id="watch-example">
 			<p>
 				Ask a yes/no question:
@@ -45,7 +55,17 @@
 		</div>
 	</div>
 
+	<!-- style && class 绑定 -->
+	<div id="bindStyle">
+		<div>*************************style && class 绑定**********************</div>
+		<div class="static" v-bind:class="{ active: isActive }">binding style</div>
+		<div v-if="ok">Yes</div>
+		<div v-show="ok">Yes</div>
+	</div>
+
 	<script src="./app.js"></script>
-	<script src="./app2.js"></script>
+	<script src="./computed.js"></script>
+	<script src="./watchers.js"></script>
+	<script src="./bindStyle.js"></script>
 </body>
 </html>
