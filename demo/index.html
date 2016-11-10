@@ -58,7 +58,8 @@
 	<!-- style && class 绑定 -->
 	<div id="bindStyle">
 		<div>*************************style && class 绑定**********************</div>
-		<div class="static" v-bind:class="{ active: isActive }">binding style</div>
+		<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">binding style</div>
+		<div v-bind:class="{ classObject }">binding style</div>
 		<div v-if="ok">Yes</div>
 		<div v-show="ok">Yes</div>
 	</div>
