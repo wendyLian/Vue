@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../element-ui/index.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./iconfont.css">
-    <script src="../vue/vue.js"></script>
-    <script src="../element-ui/index.js"></script>
-    <script src="./jquery.min.js"></script>
-    <script src="./H-ui.js"></script>
-    <script src="./H-ui.admin.js"></script>
+    <link rel="stylesheet" href="./css/element-ui/index.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link href="http://open.oa.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <script src="./js/vue.js"></script>
+    <script src="./js/elementui-index.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/H-ui.js"></script>
+    <script src="./js/H-ui.admin.js"></script>
 </head>
 <body>
 <div id="app"></div>
@@ -23,7 +24,7 @@
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top">
                 <a class="sidebar-toggle" href="javascript:void(0);" onclick="displaynavbar(this)">
-                    <span class="sr-only"></span>
+                    <i class="sr-only fa fa-bars"></i>
                 </a>
                 <div class="navbar-custom-menu">
                     <span class="txt">您好, linklin</span>
@@ -31,145 +32,252 @@
                 </div>
             </nav>
         </header>
+        <!-- Left side -->
         <aside class="main-sidebar">
             <input runat="server" id="divScrollValue" type="hidden" value="" />
             <div class="menu_dropdown bk_2">
                 <dl id="menu-article">
-                                <dt class=""><i class="Hui-iconfont"></i> <a _href="http://data.cm.com/admin/serviceData/index" href="javascript:void(0)" data-active="active">工单查询</a></dt>
-                        </dl>
+                    <dt>
+                        <a _href="http://data.cm.com/admin/serviceData/index" href="javascript:void(0)"
+                        data-active="active">
+                            <i class="Hui-iconfont">
+                                
+                            </i>
+                            <span>工单查询</span>
+                        </a>
+                    </dt>
+                </dl>
                 <dl id="menu-article">
-                                <dt><i class="Hui-iconfont"></i> <a _href="http://data.cm.com/admin/Axis/index" href="javascript:void(0)" data-active="">图谱监控</a></dt>
-                        </dl>
+                    <dt>
+                        
+                        <a _href="http://data.cm.com/admin/Axis/index" href="javascript:void(0)"
+                        data-active="">
+                            <i class="Hui-iconfont">
+                                
+                            </i>
+                            <span>图谱监控</span>
+                        </a>
+                    </dt>
+                </dl>
                 <dl id="menu-article">
-                                <dt><i class="Hui-iconfont"></i> <a _href="http://data.cm.com/admin/serviceData/tags" href="javascript:void(0)" data-active="">导出标签</a></dt>
-                        </dl>
+                    <dt>
+                        <a _href="http://data.cm.com/admin/serviceData/tags" href="javascript:void(0)"
+                        data-active="">
+                            <i class="Hui-iconfont">
+                                
+                            </i>
+                            <span>导出标签</span>
+                        </a>
+                    </dt>
+                </dl>
                 <dl id="menu-reports">
-                                <dt class="selected"><i class="Hui-iconfont"></i> VOC管理<i class="Hui-iconfont menu_dropdown-arrow"></i></dt>
-                <dd style="display: block;">
-                    <ul>
-                                                        <li><a _href="http://data.cm.com/admin/headline/index" href="javascript:void(0)" data-active="" id="">头条列表</a></li>
-                                                </ul>
-                </dd>
-                        </dl>
+                    <dt class="selected">
+                            <i class="Hui-iconfont">
+                                
+                            </i>
+                            <span>VOC管理</span>
+                            <i class="Hui-iconfont menu_dropdown-arrow">
+                                
+                            </i>
+                    </dt>
+                    <dd style="display: block;">
+                        <ul>
+                            <li>
+                                <a _href="http://data.cm.com/admin/headline/index" href="javascript:void(0)"
+                                data-active="" id="">
+                                    头条列表
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
                 <dl id="menu-member">
-                                <dt class=""><i class="Hui-iconfont"></i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow"></i></dt>
-                <dd style="display: none;">
-                    <ul>
-                                                        <li><a _href="http://data.cm.com/admin/user/index" href="javascript:void(0)" data-active="" id="">管理员列表</a></li>
-                                                        <li><a _href="http://data.cm.com/admin/role/index" href="javascript:void(0)" data-active="" id="">角色权限配置</a></li>
-                                                </ul>
-                </dd>
-                        </dl>
+                    <dt class="">
+                        <i class="Hui-iconfont">
+                            
+                        </i>
+                        <span>管理员管理</span>
+                        <i class="Hui-iconfont menu_dropdown-arrow">
+                            
+                        </i>
+                    </dt>
+                    <dd style="display: none;">
+                        <ul>
+                            <li>
+                                <a _href="http://data.cm.com/admin/user/index" href="javascript:void(0)"
+                                data-active="" id="">
+                                    管理员列表
+                                </a>
+                            </li>
+                            <li>
+                                <a _href="http://data.cm.com/admin/role/index" href="javascript:void(0)"
+                                data-active="" id="">
+                                    角色权限配置
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
                 <dl id="menu-system">
-                                <dt><i class="Hui-iconfont"></i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow"></i></dt>
-                <dd style="">
-                    <ul>
-                                                        <li><a _href="http://data.cm.com/admin/log/index/" href="javascript:void(0)" data-active="" id="">系统日志</a></li>
-                                                </ul>
-                </dd>
-                        </dl>
+                    <dt>
+                        <i class="Hui-iconfont">
+                            
+                        </i>
+                        <span>系统管理</span>
+                        <i class="Hui-iconfont menu_dropdown-arrow">
+                            
+                        </i>
+                    </dt>
+                    <dd style="">
+                        <ul>
+                            <li>
+                                <a _href="http://data.cm.com/admin/log/index/" href="javascript:void(0)"
+                                data-active="" id="">
+                                    系统日志
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
                 <dl id="menu-system">
-                                <dt><i class="Hui-iconfont"></i> 统计分析<i class="Hui-iconfont menu_dropdown-arrow"></i></dt>
-                <dd style="">
-                    <ul>
-                                                        <li><a _href="http://data.cm.com/admin/pageview/index/" href="javascript:void(0)" data-active="" id="">访问数据</a></li>
-                                                </ul>
-                </dd>
-                        </dl>
+                    <dt>
+                        <i class="Hui-iconfont">
+                            
+                        </i>
+                        <span>统计分析</span>
+                        <i class="Hui-iconfont menu_dropdown-arrow">
+                            
+                        </i>
+                    </dt>
+                    <dd style="">
+                        <ul>
+                            <li>
+                                <a _href="http://data.cm.com/admin/pageview/index/" href="javascript:void(0)"
+                                data-active="" id="">
+                                    访问数据
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </aside>
-        <div class="content-wrapper" style="min-height: 899px;">
-            <mycontents></mycontents>
+        <div class="content-wrapper">
+            <div class="container">
+                <mycontents></mycontents>
+            </div>
         </div>
     </div>
 </template>
 
 <template id="contents_tpl">
-    <el-row :gutter="24" style="overflow-x: hidden;">
-        <el-col :span="12" :offset="6" style="padding:10px 10px;border: 1px solid #e0e6ed;">
-            <el-form :model="editForm" :rules="rules" ref="editForm" label-width="100px" class="demo-editForm">
-                <el-form-item label="活动名称" prop="name">
-                    <el-input v-model="editForm.name"></el-input>
-                </el-form-item>
-                <el-form-item label="活动区域" prop="region">
-                    <el-select v-model="editForm.region" placeholder="请选择活动区域">
-                        <el-option label="区域一" value="shanghai"></el-option>
-                        <el-option label="区域二" value="beijing"></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item label="活动时间" required>
-                    <el-col :span="11">
-                        <el-form-item prop="date1">
-                            <el-date-picker type="date" placeholder="选择日期" v-model="editForm.date1" style="width: 100%;"></el-date-picker>
+    <el-tabs type="border-card" :closable="true" @tab-remove="handleRemove">
+        <el-tab-pane label="用户管理">
+            <div class="breadcrumb">
+                <el-breadcrumb separator="/">
+                    <!-- <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item> -->
+                    <el-breadcrumb-item><i class="fa fa-home"></i>首页</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+                </el-breadcrumb>
+            </div>
+            <el-row :gutter="24" style="overflow-x: hidden;">
+                <el-col :span="12" :offset="6" style="padding:10px 10px;border: 1px solid #e0e6ed;">
+                  <el-form :model="editForm" :rules="rules" ref="editForm" label-width="100px" class="demo-editForm">
+                      <el-form-item label="活动名称" prop="name">
+                          <el-input v-model="editForm.name"></el-input>
+                      </el-form-item>
+                      <el-form-item label="活动区域" prop="region">
+                          <el-select v-model="editForm.region" placeholder="请选择活动区域">
+                              <el-option label="区域一" value="shanghai"></el-option>
+                              <el-option label="区域二" value="beijing"></el-option>
+                          </el-select>
+                      </el-form-item>
+                      <el-form-item label="活动时间" required>
+                          <el-col :span="11">
+                              <el-form-item prop="date1">
+                                  <el-date-picker type="date" placeholder="选择日期" v-model="editForm.date1" style="width: 100%;"></el-date-picker>
+                              </el-form-item>
+                          </el-col>
+                          <el-col class="line" :span="2">-</el-col>
+                          <el-col :span="11">
+                              <el-form-item prop="date2">
+                                  <el-time-picker type="fixed-time" placeholder="选择时间" v-model="editForm.date2" style="width: 100%;"></el-time-picker>
+                              </el-form-item>
+                          </el-col>
+                      </el-form-item>
+                      <el-form-item label="即时配送">
+                          <el-switch on-text="" off-text="" v-model="editForm.delivery"></el-switch>
+                      </el-form-item>
+                      <el-form-item label="活动性质" prop="type">
+                          <el-checkbox-group v-model="editForm.type">
+                              <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                              <el-checkbox label="地推活动" name="type"></el-checkbox>
+                              <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                              <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+                          </el-checkbox-group>
+                      </el-form-item>
+                      <el-form-item label="特殊资源" prop="resource">
+                          <el-radio-group v-model="editForm.resource">
+                              <el-radio label="线上品牌商赞助"></el-radio>
+                              <el-radio label="线下场地免费"></el-radio>
+                          </el-radio-group>
+                      </el-form-item>
+                      <el-form-item label="上传文件">
+                          <el-upload
+                                  action="http://jsonplaceholder.typicode.com/"
+                                  :on-preview="handlePreview"
+                                  :on-remove="handleRemove">
+                              <el-button size="small" type="primary">点击上传</el-button>
+                              <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+                          </el-upload>
+                      </el-form-item>
+                      <el-form-item label="活动形式" prop="desc">
+                          <el-input type="textarea" v-model="editForm.desc"></el-input>
+                      </el-form-item>
+                      <el-form-item
+                          v-for="(domain, index) in editForm.domains"
+                          :label="'域名' + index"
+                          :key="domain.key"
+                          :prop="'domains:' + index"
+                          :rules="{
+                            type: 'object', required: true,
+                            fields: {
+                              value: { required: true, message: '域名不能为空', trigger: 'blur' }
+                            }
+                          }"
+                        >
+                          <el-col :span="11">
+                              <el-input v-model="domain.value"></el-input>
+                          </el-col>
+                          <el-col :span="11">
+                              <el-select v-model="domain.value1" placeholder="活动区域">
+                                <el-option label="区域一" value="shanghai"></el-option>
+                                <el-option label="区域二" value="beijing"></el-option>
+                              </el-select>
+                          </el-col>
+                          <el-button @click.native.prevent="removeDomain(domain)">删除</el-button>
                         </el-form-item>
-                    </el-col>
-                    <el-col class="line" :span="2">-</el-col>
-                    <el-col :span="11">
-                        <el-form-item prop="date2">
-                            <el-time-picker type="fixed-time" placeholder="选择时间" v-model="editForm.date2" style="width: 100%;"></el-time-picker>
-                        </el-form-item>
-                    </el-col>
-                </el-form-item>
-                <el-form-item label="即时配送">
-                    <el-switch on-text="" off-text="" v-model="editForm.delivery"></el-switch>
-                </el-form-item>
-                <el-form-item label="活动性质" prop="type">
-                    <el-checkbox-group v-model="editForm.type">
-                        <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-                        <el-checkbox label="地推活动" name="type"></el-checkbox>
-                        <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-                        <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-                    </el-checkbox-group>
-                </el-form-item>
-                <el-form-item label="特殊资源" prop="resource">
-                    <el-radio-group v-model="editForm.resource">
-                        <el-radio label="线上品牌商赞助"></el-radio>
-                        <el-radio label="线下场地免费"></el-radio>
-                    </el-radio-group>
-                </el-form-item>
-                <el-form-item label="上传文件">
-                    <el-upload
-                            action="http://jsonplaceholder.typicode.com/"
-                            :on-preview="handlePreview"
-                            :on-remove="handleRemove">
-                        <el-button size="small" type="primary">点击上传</el-button>
-                        <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
-                    </el-upload>
-                </el-form-item>
-                <el-form-item label="活动形式" prop="desc">
-                    <el-input type="textarea" v-model="editForm.desc"></el-input>
-                </el-form-item>
-                <el-form-item
-                    v-for="(domain, index) in editForm.domains"
-                    :label="'域名' + index"
-                    :key="domain.key"
-                    :prop="'domains:' + index"
-                    :rules="{
-                      type: 'object', required: true,
-                      fields: {
-                        value: { required: true, message: '域名不能为空', trigger: 'blur' }
-                      }
-                    }"
-                  >
-                    <el-col :span="11">
-                        <el-input v-model="domain.value"></el-input>
-                    </el-col>
-                    <el-col :span="11">
-                        <el-select v-model="domain.value1" placeholder="活动区域">
-                          <el-option label="区域一" value="shanghai"></el-option>
-                          <el-option label="区域二" value="beijing"></el-option>
-                        </el-select>
-                    </el-col>
-                    <el-button @click.native.prevent="removeDomain(domain)">删除</el-button>
-                  </el-form-item>
-                  <el-button @click.native.prevent="addDomain">新增域名</el-button>
-                <el-form-item>
-                    <el-button type="primary" @click.native.prevent="handleSubmit">立即创建</el-button>
-                    <el-button @click.native.prevent="handleReset">重置</el-button>
-                </el-form-item>
-            </el-form>
-        </el-col>
-    </el-row>
+                        <el-button @click.native.prevent="addDomain">新增域名</el-button>
+                      <el-form-item>
+                          <el-button type="primary" @click.native.prevent="handleSubmit">立即创建</el-button>
+                          <el-button @click.native.prevent="handleReset">重置</el-button>
+                      </el-form-item>
+                  </el-form>
+                </el-col>
+            </el-row>
+        </el-tab-pane>
+      <el-tab-pane label="配置管理">
+          2222222222222
+      </el-tab-pane>
+      <el-tab-pane label="角色管理">
+          33333333333
+      </el-tab-pane>
+      <el-tab-pane label="定时任务补偿">
+          444444444444
+      </el-tab-pane>
+    </el-tabs>
 </template>
 
 </body>
@@ -286,7 +394,10 @@
 
         },
         mounted: function(){
-
+            var iframeHeight = document.body.scrollHeight - $('.main-header').height() - 20*2;
+            var contentHeight = iframeHeight - 42*2;
+            $('.content-wrapper').css("min-height",iframeHeight);
+            $('.el-tabs__content').css("min-height",contentHeight);
         },
         methods: {
             
